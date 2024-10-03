@@ -21,3 +21,4 @@ class DualInput:
         response = self.input_func(prompt)
         self.file.write(prompt + response + "\n")
         self.file.flush()
+        return response

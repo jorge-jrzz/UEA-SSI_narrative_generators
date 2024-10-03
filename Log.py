@@ -1,4 +1,3 @@
-
 """This file is used to configure the logger for the project"""
 
 import logging
