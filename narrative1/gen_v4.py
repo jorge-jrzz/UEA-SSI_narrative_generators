@@ -5,8 +5,11 @@ from datetime import datetime
 from Dual import DualOutput, DualInput
 
 locations = ["dormitorio", "baño", "inicio del pasillo", "final del pasillo"]
-goals = ["Cerrando la puerta del baño con llave para estar a salvo", "Moviendo el personaje al interior del baño"]
-key_posibilities = {1:"pegada en la puerta", 2:"en el cajón", 3:"el bolsillo de la chaqueta", 4:"el bolsillo del pantalón", 5:"perdida"}
+goals = ["Cerrando la puerta del baño con llave para estar a salvo",
+         "Moviendo el personaje al interior del baño"]
+key_posibilities = {1: "pegada en la puerta", 2: "en el cajón",
+                    3: "el bolsillo de la chaqueta", 4: "el bolsillo del pantalón", 5: "perdida"}
+
 
 class Character:
     def __init__(self, name: str, location: str, is_safe: bool):
@@ -25,7 +28,8 @@ class Character:
             if self.location == "inicio del pasillo":
                 print(f"{self.name} ya está en el inicio del pasillo.")
             else:
-                print(f"{self.name} no puede moverse a inicio del pasillo desde el {self.location}.")
+                print(f"{self.name} no puede moverse a inicio del pasillo desde el {
+                      self.location}.")
         print(f"Estado actual del personaje:\n{self}")
         return
 
@@ -40,7 +44,8 @@ class Character:
             if self.location == "final del pasillo":
                 print(f"{self.name} ya está en el final del pasillo.")
             else:
-                print(f"{self.name} no puede moverse al final del pasillo desde el {self.location}.")
+                print(f"{self.name} no puede moverse al final del pasillo desde el {
+                      self.location}.")
         print(f"Estado actual del personaje:\n{self}")
         return
 
@@ -55,7 +60,8 @@ class Character:
             if self.location == "dormitorio":
                 print(f"{self.name} ya está en el dormitorio.")
             else:
-                print(f"{self.name} no puede moverse a al dormitorio desde el {self.location}.")
+                print(f"{self.name} no puede moverse a al dormitorio desde el {
+                      self.location}.")
         print(f"Estado actual del personaje:\n{self}")
         return
 
@@ -70,7 +76,8 @@ class Character:
             if self.location == "baño":
                 print(f"{self.name} ya está en el baño.")
             else:
-                print(f"{self.name} no puede moverse al baño desde el {self.location}.")
+                print(f"{self.name} no puede moverse al baño desde el {
+                      self.location}.")
         print(f"Estado actual del personaje:\n{self}")
 
     def search_key(self, key_state: str, final_step: Optional[bool] = None) -> Union[bool, None]:
@@ -82,10 +89,12 @@ class Character:
                         return True
                     else:
                         print(f"La llave no fue encontrada.")
-                        print(f"{self.name} no puede cerrar la puerta del baño, y no esta seguro.\n")
+                        print(
+                            f"{self.name} no puede cerrar la puerta del baño, y no esta seguro.\n")
                         return False
                 else:
-                    print(f"La llave no fue encontrada en {key_posibilities[ubi_key]}. \nBuscando en otro lugar...\n")
+                    print(f"La llave no fue encontrada en {
+                          key_posibilities[ubi_key]}. \nBuscando en otro lugar...\n")
             if final_step:
                 self.is_safe = True
                 print(f"{self.name} ha completado la meta de la historia.")
@@ -102,7 +111,8 @@ class Character:
                 self.is_safe = True
                 print(f"{self.name} ha completado la meta de la historia.")
         else:
-            print(f"{self.name} no puede cerrar la puerta del baño en {self.location}.")
+            print(f"{self.name} no puede cerrar la puerta del baño en {
+                  self.location}.")
         print(f"Estado actual del personaje:\n{self}")
         return
 
@@ -117,6 +127,7 @@ def goal_bathroom(char: Character) -> None:
     print(f"{char.name} ha entrado al baño y ahora está seguro.")
     return
 
+
 def goal_close_door(char: Character, ubi_key: str) -> None:
     char.go_start_of_aisle()
     char.go_end_of_aisle()
@@ -126,6 +137,7 @@ def goal_close_door(char: Character, ubi_key: str) -> None:
     char.close_door(final_step=True)
     print(f"{char.name} ha cerrado la puerta del baño con llave y ahora está seguro.")
     return
+
 
 def main():
     print("\n\t*** Generador de historias ***\n\n")
@@ -137,9 +149,11 @@ def main():
         print(f"Ingrese la ubicación del personaje {i + 1}: ")
         for index, loc in enumerate(locations):
             print(f"{index + 1}. {loc}")
-        ubi = int(input("Ingrese la ubicación inicial del protagonista (número): ")) - 1
+        ubi = int(
+            input("Ingrese la ubicación inicial del protagonista (número): ")) - 1
         safe = input("¿El personaje está seguro? (s/n): ")
-        characters.append(Character(name, locations[ubi], False if safe == "n" else True))
+        characters.append(
+            Character(name, locations[ubi], False if safe == "n" else True))
 
     print("\n¿Cuál es la meta de la historia?")
     for index, goal in enumerate(goals):
@@ -154,17 +168,18 @@ def main():
         if goal == 0:
             # Meta: Cerrando la puerta del baño con llave para estar a salvo
             if char.is_safe:
-                print(f"Historia del personaje {char.name} complateda. El personaje ya está a salvo.")
+                print(f"Historia del personaje {
+                      char.name} complateda. El personaje ya está a salvo.")
             else:
                 print("*** Estado de la llave de la puerta del baño ***")
                 key_status = choice(list(key_posibilities.values()))
                 print(f"\n\n * La llave está {key_status} *\n\n")
-                goal_close_door(char, key_status)
-
+                goal_close_door(char, key_status) 
+        # Meta: Moviendo el personaje al baño
         elif goal == 1:
-            # Meta: Moviendo el personaje al baño
             if char.is_safe:
-                print(f"Historia del personaje {char.name} completada. El personaje ya está a salvo.")
+                print(f"Historia del personaje {
+                      char.name} completada. El personaje ya está a salvo.")
             else:
                 goal_bathroom(char)
 
@@ -175,7 +190,7 @@ if __name__ == "__main__":
     datenow = datetime.now()
     datetime = datenow.strftime("%m-%d_%H-%M")
 
-    log_file = open(f"outputs/output_{datetime}.txt", 'w')
+    log_file = open(f"narrative1/logs/output_{datetime}.txt", 'w')
     dual_output = DualOutput(log_file, sys.stdout)
     dual_input = DualInput(log_file)
 
