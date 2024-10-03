@@ -1,0 +1,68 @@
+ Fecha y hora de ejecución:  10/03 - 08:34
+ Autor: Jorge Angel Juarez Vazquez
+
+
+
+	*** Generador de historias ***
+
+
+* Ingrese el número de personajes (maximo 5): * Ingrese el número de personajes (maximo 5): 1
+
+Información de personaje 1:
+* Ingrese el nombre del personaje 1: * Ingrese el nombre del personaje 1: Yorch
+Ubicación del personaje 1: 
+1. dormitorio
+2. baño
+3. inicio del pasillo
+4. final del pasillo
+* Ingrese la ubicación inicial del protagonista (número): * Ingrese la ubicación inicial del protagonista (número): 3
+* ¿El personaje está seguro? (s/n): * ¿El personaje está seguro? (s/n): n
+*¿Cuál es la meta de la historia?
+1. Cerrar la puerta del baño con llave para estar a salvo
+2. Mover el personaje al baño
+* Ingrese la meta de la historia (número): * Ingrese la meta de la historia (número): 1
+
+
+	*** Empezando generación de historia ***
+
+PERSONAJE 1 - Yorch
+Estado inicial del personaje:
+
+	Estructura del personaje Yorch:
+	- Ubicación: inicio del pasillo
+	- ¿Está seguro?: No
+
+	El personaje Yorch no está en el dormitorio, no se puede iniciar ninguno de los planes.
+	Buscando un camino hacia el dormitorio para Yorch...
+	@ Buscando el camino desde inicio del pasillo al dormitorio...
+
+	@ Explorando camino: ['inicio del pasillo'] (actualmente en inicio del pasillo)
+	@ Marcando inicio del pasillo como visitado.
+	@ Agregando nuevo camino a la cola: ['inicio del pasillo', 'dormitorio']
+	@ Agregando nuevo camino a la cola: ['inicio del pasillo', 'final del pasillo']
+	@ Explorando camino: ['inicio del pasillo', 'dormitorio'] (actualmente en dormitorio)
+	@ ¡Camino encontrado! El camino es: ['inicio del pasillo', 'dormitorio']
+El personaje Yorch está en inicio del pasillo. Moviéndolo al dormitorio.
+
+
+
+^ Intentando mover a Yorch a inicio del pasillo...
+Yorch no puede moverse a inicio del pasillo desde inicio del pasillo.
+^ Intentando mover a Yorch a dormitorio...
+Yorch se ha movido de inicio del pasillo a dormitorio.
+	** Estado de la llave de la puerta del baño **
+	** La llave está pegada en la puerta **
+^ Intentando mover a Yorch a inicio del pasillo...
+Yorch se ha movido de dormitorio a inicio del pasillo.
+^ Intentando mover a Yorch a final del pasillo...
+Yorch se ha movido de inicio del pasillo a final del pasillo.
+^ Intentando mover a Yorch a baño...
+Yorch se ha movido de final del pasillo a baño.
+Yorch ha cerrado la puerta del baño y está seguro.
+
+Estado final del personaje:
+
+	Estructura del personaje Yorch:
+	- Ubicación: baño
+	- ¿Está seguro?: Sí
+
