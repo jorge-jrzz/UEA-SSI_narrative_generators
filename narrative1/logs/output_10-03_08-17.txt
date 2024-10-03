@@ -1,0 +1,61 @@
+
+	*** Generador de historias ***
+
+
+Ingrese el número de personajes (maximo 5) : Ingrese el número de personajes (maximo 5) : 1
+
+Información de personaje 1:
+Ingrese el nombre del personaje 1: Ingrese el nombre del personaje 1: Jorge
+Ingrese la ubicación del personaje 1: 
+1. dormitorio
+2. baño
+3. inicio del pasillo
+4. final del pasillo
+Ingrese la ubicación inicial del protagonista (número): Ingrese la ubicación inicial del protagonista (número): 1
+¿El personaje está seguro? (s/n): ¿El personaje está seguro? (s/n): n
+
+¿Cuál es la meta de la historia?
+1. Cerrando la puerta del baño con llave para estar a salvo
+2. Moviendo el personaje al interior del baño
+Ingrese la meta de la historia (número): Ingrese la meta de la historia (número): 1
+
+	*** Empezando generación de historia ***
+
+PERSONAJE 1 - Jorge
+Estado inicial del personaje:
+Estructura del personaje Jorge:
+- Ubicación: dormitorio
+- ¿Está seguro?: No
+
+Jorge se ha movido a inicio del pasillo.
+Estado actual del personaje:
+Estructura del personaje Jorge:
+- Ubicación: inicio del pasillo
+- ¿Está seguro?: No
+
+Jorge se ha movido a final del pasillo.
+Estado actual del personaje:
+Estructura del personaje Jorge:
+- Ubicación: final del pasillo
+- ¿Está seguro?: No
+
+Jorge se ha movido a baño.
+Estado actual del personaje:
+Estructura del personaje Jorge:
+- Ubicación: baño
+- ¿Está seguro?: No
+
+Jorge ha cerrado la puerta del baño con llave.
+Jorge ha completado la meta de la historia.
+Estado actual del personaje:
+Estructura del personaje Jorge:
+- Ubicación: baño
+- ¿Está seguro?: Sí
+
+Jorge ha cerrado la puerta del baño con llave y ahora está seguro.
+
+Estado final del personaje:
+Estructura del personaje Jorge:
+- Ubicación: baño
+- ¿Está seguro?: Sí
+
