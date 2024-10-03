@@ -114,7 +114,7 @@ def generate_story(datetime_str: str) -> None:
     '''
 
     print(" Fecha y hora de ejecución: ", datetime_str)
-    print(" Autor: Jorge ANgel Juarez Vazquez\n\n")
+    print(" Autor: Jorge Angel Juarez Vazquez\n\n")
     print("\n\t*** Generador de historias ***\n\n")
     num_chars = int(input("* Ingrese el número de personajes (maximo 5): "))
     characters = []
@@ -177,9 +177,9 @@ def generate_story(datetime_str: str) -> None:
 
 if __name__ == "__main__":
     datenow = datetime.now()
-    datetime_str = datenow.strftime("%m-%d_%H-%M")
+    datetime = datenow.strftime("%m-%d_%H-%M")
 
-    log_file = open(f"../outputs/output_{datetime_str}.txt", 'w', encoding='utf-8')
+    log_file = open(f"narrative1/logs/output_{datetime}.txt", 'w', encoding='utf-8')
     dual_output = DualOutput(log_file, sys.stdout)
     dual_input = DualInput(log_file)
 
