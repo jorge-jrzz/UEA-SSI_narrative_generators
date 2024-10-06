@@ -1,6 +1,6 @@
 import sys
 from datetime import datetime
-from Dual import DualOutput, DualInput
+from utils import DualOutput, DualInput
 
 
 class Character:

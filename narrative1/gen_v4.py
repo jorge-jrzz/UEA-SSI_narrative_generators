@@ -2,7 +2,7 @@ import sys
 from typing import Optional, Union, List
 from random import choice
 from datetime import datetime
-from Dual import DualOutput, DualInput
+from utils import DualOutput, DualInput
 
 locations = ["dormitorio", "baño", "inicio del pasillo", "final del pasillo"]
 goals = ["Cerrando la puerta del baño con llave para estar a salvo",

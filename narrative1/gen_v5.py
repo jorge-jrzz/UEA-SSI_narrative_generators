@@ -3,7 +3,7 @@ from collections import deque
 from typing import Optional, Union, List
 from random import choice
 from datetime import datetime
-from Dual import DualOutput, DualInput
+from utils import DualOutput, DualInput
 
 locations = ["dormitorio", "baño", "inicio del pasillo", "final del pasillo"]
 

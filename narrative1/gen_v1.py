@@ -1,6 +1,6 @@
 from typing import List
 from random import choice
-from Log import get_logger
+from utils import get_logger
 
 logger = get_logger("History Generator")
 

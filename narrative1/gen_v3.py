@@ -1,7 +1,7 @@
 import sys
 from typing import Optional
 from datetime import datetime
-from Dual import DualOutput, DualInput
+from utils import DualOutput, DualInput
 
 
 class Character:
